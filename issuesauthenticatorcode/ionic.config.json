@@ -1,6 +1,6 @@
 {
   "name": "issuesauthenticator",
-  "app_id": "",
+  "app_id": "afc80eab",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
