@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'page-list',
-  templateUrl: 'list.html'
+  selector: 'page-profile',
+  templateUrl: 'profile.html'
 })
 export class ProfilePage {
   selectedItem: any;
