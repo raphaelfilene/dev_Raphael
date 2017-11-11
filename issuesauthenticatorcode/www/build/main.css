@@ -25512,11 +25512,37 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-top));
 }
 
+page-config .bg-style {
+  background: #dfe0e0;
+}
+
+page-config .img-center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 page-home .bg-style {
   background: #dfe0e0;
 }
 
 page-home .img-center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+page-profile .bg-style {
+  background: #dfe0e0;
+}
+
+page-profile .img-center {
   position: absolute;
   margin: auto;
   top: 0;

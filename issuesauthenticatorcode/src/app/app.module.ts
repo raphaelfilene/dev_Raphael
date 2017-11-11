@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ProfilePage } from '../pages/profile/profile';
+import { ConfigPage } from '../pages/config/config';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,11 +14,13 @@ import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Hotspot } from '@ionic-native/hotspot';
 
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ProfilePage
+    ProfilePage,
+    ConfigPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { Hotspot } from '@ionic-native/hotspot';
   entryComponents: [
     MyApp,
     HomePage,
-    ProfilePage
+    ProfilePage,
+    ConfigPage
   ],
   providers: [
     LocationTrackerProvider,
