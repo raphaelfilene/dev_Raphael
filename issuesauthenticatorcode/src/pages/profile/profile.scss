@@ -1,13 +1,20 @@
 page-profile {
     .bg-style {
-        background: #dfe0e0;
+        background: #ffffff;
     }
-    .img-center {
+    // .img-center {
+    //     position: absolute;
+    //     margin: auto;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    // }
+    .save-button {
         position: absolute;
-        margin: auto;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        text-align: center;
+        width:50%;
+        bottom: 45%;
+        left: 25%;
     }
 }

@@ -91,15 +91,21 @@ var ProfilePage = (function () {
     function ProfilePage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    ProfilePage.prototype.onSave = function () {
+        console.log(this.temperature);
+        console.log(this.lighting);
+        console.log(this.humidity);
+    };
     return ProfilePage;
 }());
 ProfilePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"/home/joao/IssuesAuthenticatorJararacucu/issuesauthenticatorcode/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Preferências</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="bg-style">\n  <img src="wifi.png" height="200" width="200" class="img-center"> \n</ion-content>\n'/*ion-inline-end:"/home/joao/IssuesAuthenticatorJararacucu/issuesauthenticatorcode/src/pages/profile/profile.html"*/
+        selector: 'page-profile',template:/*ion-inline-start:"/home/joao/IssuesAuthenticatorJararacucu/issuesauthenticatorcode/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Preferências</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="bg-style">\n  <ion-list>       \n    <ion-item>\n      <ion-label floating>TEMPERATURA (C°)</ion-label>\n      <ion-input type="number" [(ngModel)]="temperature"></ion-input>\n    </ion-item>\n    <br>\n    <ion-item>\n      <ion-label floating>ILUMINAÇÃO (%)</ion-label>\n      <ion-input type="number" [(ngModel)]="lighting"></ion-input>\n    </ion-item>\n    <br>\n    <ion-item>\n      <ion-label floating>UMIDADE (%)</ion-label>\n      <ion-input type="number" [(ngModel)]="humidity"></ion-input>\n    </ion-item>\n  </ion-list>\n  <button ion-button block class="save-button" (click)="onSave()">SALVAR</button>\n</ion-content>\n'/*ion-inline-end:"/home/joao/IssuesAuthenticatorJararacucu/issuesauthenticatorcode/src/pages/profile/profile.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object])
 ], ProfilePage);
 
+var _a;
 //# sourceMappingURL=profile.js.map
 
 /***/ }),
@@ -292,15 +298,14 @@ var MyApp = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */]),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */])
 ], MyApp.prototype, "nav", void 0);
 MyApp = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/joao/IssuesAuthenticatorJararacucu/issuesauthenticatorcode/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/home/joao/IssuesAuthenticatorJararacucu/issuesauthenticatorcode/src/app/app.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
 
-var _a, _b, _c, _d;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),

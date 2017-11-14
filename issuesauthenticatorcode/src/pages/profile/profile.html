@@ -8,5 +8,21 @@
 </ion-header>
 
 <ion-content padding class="bg-style">
-  <img src="wifi.png" height="200" width="200" class="img-center"> 
+  <ion-list>       
+    <ion-item>
+      <ion-label floating>TEMPERATURA (C°)</ion-label>
+      <ion-input type="number" [(ngModel)]="temperature"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label floating>ILUMINAÇÃO (%)</ion-label>
+      <ion-input type="number" [(ngModel)]="lighting"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label floating>UMIDADE (%)</ion-label>
+      <ion-input type="number" [(ngModel)]="humidity"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button block class="save-button" (click)="onSave()">SALVAR</button>
 </ion-content>
